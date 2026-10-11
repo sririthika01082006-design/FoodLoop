@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodLoop - Save Food, Share Hope</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🥗 FoodLoop</h1>
+    <p>Save Food. Share Resources. Reduce Waste.</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#listings">Available Food</a>
+    <a href="#donate">Share Food</a>
+    <a href="#impact">Our Impact</a>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <h2>Good Food Deserves Another Chance!</h2>
+      <p>Connect surplus food with people who need it.</p>
+      <a class="btn" href="#listings">Explore Food</a>
+    </section>
+
+    <section id="listings">
+      <h2>Available Food</h2>
+      <p class="note">Sample listings for demonstration only.</p>
+      <div id="foodList" class="food-grid"></div>
+    </section>
+
+    <section id="donate">
+      <h2>Share Surplus Food</h2>
+      <form id="foodForm">
+        <label for="foodName">Food Name</label>
+        <input id="foodName" required placeholder="Vegetable rice">
+
+        <label for="quantity">Quantity (portions)</label>
+        <input id="quantity" type="number" min="1" required>
+
+        <label for="location">Pickup Location</label>
+        <input id="location" required placeholder="College canteen">
+
+        <label for="deadline">Pickup Deadline</label>
+        <input id="deadline" type="datetime-local" required>
+
+        <button type="submit">Add Food Listing</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section id="impact">
+      <h2>FoodLoop Impact</h2>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <h3 id="listingCount">0</h3>
+          <p>Listings</p>
+        </div>
+        <div class="impact-card">
+          <h3 id="portionCount">0</h3>
+          <p>Portions Offered</p>
+        </div>
+        <div class="impact-card">
+          <h3 id="collectedCount">0</h3>
+          <p>Portions Collected</p>
+        </div>
+      </div>
+      <p class="note">Counts reflect activity recorded in this browser demo.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>FoodLoop - A future with less food waste.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
